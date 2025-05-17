@@ -58,7 +58,3 @@ npm run build
 ```
 
 GitHub Pages への自動デプロイは [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) で設定されています。
-
-## ライセンス
-
-[MIT](LICENSE)

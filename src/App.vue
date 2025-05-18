@@ -3,7 +3,7 @@
     <header>
       <h1>BMI計算アプリ</h1>
       <nav>
-        <router-link to="/">ホーム</router-link> |
+        <router-link to="/">計算アプリ</router-link> |
         <router-link to="/overview">概要</router-link>
       </nav>
     </header>

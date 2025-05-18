@@ -1,9 +1,9 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from './components/Home.vue'
-import Overview from './components/Overview.vue'
+import BmiMain from '../components/BmiMain.vue'
+import Overview from '../components/Overview.vue'
 
 const routes = [
-  { path: '/', component: Home },
+  { path: '/', component: BmiMain },
   { path: '/overview', component: Overview }
 ]
 

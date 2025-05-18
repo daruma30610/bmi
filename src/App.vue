@@ -2,13 +2,14 @@
   <div class="app">
     <header>
       <h1>BMI計算アプリ</h1>
+      <nav>
+        <router-link to="/">ホーム</router-link> |
+        <router-link to="/overview">概要</router-link>
+      </nav>
     </header>
-    
     <main>
-      <BmiForm />
-      <BmiResult />
+      <router-view />
     </main>
-    
     <footer>
       <p>© 2025 BMI計算アプリ</p>
     </footer>
@@ -16,64 +17,22 @@
 </template>
 
 <script setup>
-import BmiForm from './components/BmiForm.vue';
-import BmiResult from './components/BmiResult.vue';
+// 既存の import は不要
 </script>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ...既存のスタイル... */
+nav {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f0f2f5;
-}
-
-.app {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-h1 {
+nav a {
   color: #4a6cf7;
+  text-decoration: none;
+  margin: 0 8px;
 }
-
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-footer {
-  margin-top: 40px;
-  text-align: center;
-  color: #888;
-  font-size: 14px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
-}
-
-@media (min-width: 768px) {
-  main {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-  
-  main > * {
-    flex: 1;
-  }
+nav a.router-link-exact-active {
+  font-weight: bold;
+  text-decoration: underline;
 }
 </style>

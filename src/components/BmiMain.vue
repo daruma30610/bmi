@@ -61,11 +61,22 @@ footer {
 @media (min-width: 768px) {
   main {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
   }
   
   main > * {
     flex: 1;
+    height: 100%; /* ← 追加 */
+  }
+
+  /* 追加: フォームと結果の高さ・幅調整 */
+  .bmi-form,
+  .bmi-result {
+    max-width: none !important;
+    margin: 0 !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>

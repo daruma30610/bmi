@@ -1,17 +1,9 @@
 <template>
   <div class="app">
-    <header>
-      <h1>BMI計算アプリ</h1>
-    </header>
-    
     <main>
       <BmiForm />
       <BmiResult />
     </main>
-    
-    <footer>
-      <p>© 2025 BMI計算アプリ</p>
-    </footer>
   </div>
 </template>
 
